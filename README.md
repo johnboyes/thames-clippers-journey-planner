@@ -90,4 +90,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-The application is set for [continuous deployment](https://www.netlify.com/docs/continuous-deployment/) to [Netlify](https://www.netlify.com)
+The application has [continuous deployment](https://www.netlify.com/docs/continuous-deployment/) to [Netlify](https://www.netlify.com)
