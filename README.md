@@ -11,7 +11,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/761a0e69-4c8d-4000-9ade-85d01c46c03e/deploy-status)](https://app.netlify.com/sites/clever-bell-ada62d/deploys)
 
-Production URL: https://clever-bell-ada62d.netlify.com/
+Production URL: https://thames-clippers-journey-planner.netlify.com/
 
 ## 🚀 Quick start
 
