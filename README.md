@@ -7,11 +7,11 @@
   Thames Clippers Journey Planner
 </h1>
 
-Production URL: https://clever-bell-ada62d.netlify.com/
-
 ## Uses [TFL](https://tfl.gov.uk/)'s [open data](https://tfl.gov.uk/info-for/open-data-users/) to provide journey information on the [Thames Clippers](https://www.thamesclippers.com/)
 
-### NB This is not an official TFL project
+[![Netlify Status](https://api.netlify.com/api/v1/badges/761a0e69-4c8d-4000-9ade-85d01c46c03e/deploy-status)](https://app.netlify.com/sites/clever-bell-ada62d/deploys)
+
+Production URL: https://clever-bell-ada62d.netlify.com/
 
 ## 🚀 Quick start
 
@@ -91,3 +91,5 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 ## 💫 Deploy
 
 The application has [continuous deployment](https://www.netlify.com/docs/continuous-deployment/) to [Netlify](https://www.netlify.com)
+
+## NB This is not an official TFL project
