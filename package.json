@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "thames-clippers-journey-planner",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Journey information on the Thames Clippers",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "John Boyes <john@agilepathway.co.uk>",
   "dependencies": {
     "gatsby": "^2.1.24",
     "gatsby-image": "^2.0.31",
@@ -35,9 +35,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/johnboyes/thames-clippers-journey-planner"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/johnboyes/thames-clippers-journey-planner/issues"
   }
 }
