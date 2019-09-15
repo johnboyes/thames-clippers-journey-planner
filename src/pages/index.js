@@ -1,21 +1,69 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+export default ({ data }) => {
+  console.log(data)
+  return (
+    <Layout>
+      <table>
+        <caption>{data.timetables.WANDSWORTH_RIVERSIDE_QUARTER_PIER_TO_BLACKFRIARS_PIER.from} to {data.timetables.WANDSWORTH_RIVERSIDE_QUARTER_PIER_TO_BLACKFRIARS_PIER.to} </caption>
+        <thead>
+          <tr>
+            <th>Departure time</th>
+            <th>Arrival time</th>
+          </tr>
+        </thead>
+        <tbody>
+        {data.timetables.WANDSWORTH_RIVERSIDE_QUARTER_PIER_TO_BLACKFRIARS_PIER.sailings.map(({ departureTime, arrivalTime }, index) => (
+          <tr key={index}>
+            <td>{departureTime}</td>
+            <td>{arrivalTime}</td>
+          </tr>
+        ))}
+        </tbody>
+      </table>
+      <table>
+      <caption>{data.timetables.BLACKFRIARS_PIER_TO_WANDSWORTH_RIVERSIDE_QUARTER_PIER.from} to {data.timetables.WANDSWORTH_RIVERSIDE_QUARTER_PIER_TO_BLACKFRIARS_PIER.from}</caption>
+        <thead>
+          <tr>
+            <th>Departure time</th>
+            <th>Arrival time</th>
+          </tr>
+        </thead>
+        <tbody>
+        {data.timetables.BLACKFRIARS_PIER_TO_WANDSWORTH_RIVERSIDE_QUARTER_PIER.sailings.map(({ departureTime, arrivalTime }, index) => (
+          <tr key={index}>
+            <td>{departureTime}</td>
+            <td>{arrivalTime}</td>
+          </tr>
+        ))}
+        </tbody>
+      </table>
+    </Layout>
+  )
+}
 
-export default IndexPage
+export const query = graphql`
+{
+  timetables {
+    WANDSWORTH_RIVERSIDE_QUARTER_PIER_TO_BLACKFRIARS_PIER: routing(from: WANDSWORTH_RIVERSIDE_QUARTER_PIER, to: BLACKFRIARS_PIER) {
+      from
+      to
+      sailings {
+        departureTime
+        arrivalTime
+      }
+    }
+    BLACKFRIARS_PIER_TO_WANDSWORTH_RIVERSIDE_QUARTER_PIER: routing(from: BLACKFRIARS_PIER, to: WANDSWORTH_RIVERSIDE_QUARTER_PIER) {
+      from
+      to
+      sailings {
+        departureTime
+        arrivalTime
+      }
+    }
+  }
+}
+`
